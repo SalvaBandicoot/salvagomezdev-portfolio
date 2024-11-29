@@ -1,1 +1,91 @@
-skills
+
+<section id="skills" class="skills">
+  <span class="skills__header section__header">what i know · what i know · what i know · what i know · what i know ·</span>
+  <div class="section__container">
+    <div>
+      <h2 class="section__title">i know about</h2>
+      <p class="skills__description">
+        <span class="skills__description--little">html</span> https
+        <span class="skills__description--little">css</span> sass 
+        <span class="skills__description--marked">javascript</span> npm 
+        git <span class="skills__description--big">github</span> 
+        <span class="skills__description--display">react</span> <span class="skills__description--marked">nodejs</span> 
+        <span class="skills__description--little">sql</span> mysql 
+        <span class="skills__description--little">mongodb</span> marianadb 
+        <span class="skills__description--marked">postgresql</span> <span class="skills__description--display">restful apis</span> 
+        <span class="skills__description--big">firebase</span> jquery
+        <span class="skills__description--display">nextjs</span> bootstrap 
+        <span class="skills__description--little">redis</span> <span class="skills__description--marked">jest</span> 
+        <span class="skills__description--big">php</span> <span class="skills__description--little">json</span> 
+        <span class="skills__description--marked">java</span> webpack 
+        <span class="skills__description--display">redux</span> indesign 
+        <span class="skills__description--little">illustrator</span> xd 
+        <span class="skills__description--marked">photoshop</span> seo 
+        <span class="skills__description--big">sem</span> <span class="skills__description--display">figma</span>
+      </p>
+    </div>
+    <div>
+      <span class="section__title">i'm learning about</span>
+      <p class="skills__description">
+        <span class="skills__description--display">aws services</span> typescript 
+        <span class="skills__description--marked">angular</span> <span class="skills__description--big">devops</span>
+        <span class="skills__description--display">astro</span> tailwind
+      </p>
+      <p class="skills__description skills__caption">and much more</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills__description {
+    font-family: var(--fnt-primary);
+    line-height: 1.2;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    padding-left: 0.2ch;
+    color: var(--clr-secondary);
+    font-size: 1.5rem;
+    width: 28ch;
+  }
+
+  @media (width >= 768px) {
+    .skills__description {
+      font-size: 2.5rem;
+      margin-bottom: 0;
+      width: 30ch;
+    }
+  }
+
+  .skills__description--little {
+    font-size: 2rem;
+  }
+
+  @media (width >= 768px) {
+    .skills__description--little {
+      font-size: 1rem;
+    }
+  }
+
+  .skills__description--big {
+    font-size: 1.6rem;
+  }
+
+  @media (width >= 768px) {
+    .skills__description--big {
+      font-size: 3rem;
+    }
+  }
+
+  .skills__description--marked {
+    color: var(--clr-primary);
+  }
+
+  .skills__description--display {
+    font-family: var(--fnt-display);
+    color: var(--clr-primary);
+  }
+
+  .skills__caption {
+    text-align: end;
+  }
+</style>
