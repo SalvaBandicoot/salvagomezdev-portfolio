@@ -1,0 +1,156 @@
+<!-- no, it's not a wordpress 🚀 -->
+<header id="header">
+  <div class="header__menu">
+    <nav class="header__nav">
+      <div class="header__data">
+        <div>
+          <span class="header__title"><a href="#header">salva gómez</a></span>
+          <span class="header__subtitle">designer, full-stack developer</span>
+        </div>
+      </div>
+      <ul class="header__links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="header__info">
+    <span class="header__subtitle header__subtitle--big">creative</span>
+    <h1 class="header__title header__title--big">designer<span class="header__subtitle header__subtitle--big header header__subtitle--clear">&</span>developer</h1>
+  </div>
+  <!-- pic by @lorenzoherrera 📷 -->
+</header>
+
+<style>
+  header {
+    padding: 6rem 3rem 0;
+    background:
+    linear-gradient(to top, #000 5%, transparent 80%),
+    url("src/assets/header-background.webp");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px black;
+  }
+  
+  .header__menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  @media (width >= 768px) {
+    .header__menu {
+      position: fixed;
+      z-index: 1;
+      backdrop-filter: blur(20px);
+    }
+  }
+  
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    margin: 0 2rem;
+    color: var(--clr-primary);
+    border-bottom: 1px solid var(--clr-bg-secondary);
+  }
+  
+  .header__data {
+    display: flex;
+    align-items: end;
+  }
+  
+  .header__title {
+    display: block;
+    font-family: var(--fnt-display);
+    font-size: 1.8rem;
+    margin-bottom: .4rem;
+  }
+  
+  @media (width >= 768px) {
+    .header__title {
+      display: inline;
+    }
+  }
+  
+  .header__title--big {
+    font-size: 4rem;
+    width: 100%;
+  }
+  
+  @media (width >= 768px) {
+    .header__title--big {
+      font-size: 6rem;
+    }
+  }
+  
+  .header__subtitle {
+    font-family: var(--fnt-primary);
+    font-size: 1rem;
+    color: var(--clr-secondary);
+    margin-top: 1rem;
+    &::after {
+      content: ' ';
+    }
+  }
+  
+  @media (width >= 768px) {
+    .header__subtitle {
+      margin-left: 1ch;
+    }
+  }
+  
+  .header__subtitle--big {
+    font-family: var(--fnt-display);
+    font-size: 2rem;
+  }
+  
+  @media (width >= 768px) {
+    .header__subtitle--big {
+      font-size: 3rem;
+    }
+  }
+  
+  .header__subtitle--clear {
+    margin: 0;
+  }
+  
+  @media (width >= 768px) {
+    .header__subtitle--clear {
+      margin: 0 1rem;
+    }
+  }
+  
+  .header__links {
+    display: none;
+  }
+  
+  @media (width >= 768px) {
+    .header__links {
+      display: flex;
+      margin-top: auto;
+      list-style-type: none;
+    }
+  }
+  
+  .header__links a {
+    font-family: var(--fnt-primary);
+    margin-left: 1ch;
+    transition: color .3s ease-in-out;
+    &:hover {
+      color: var(--clr-secondary);
+    }
+  }
+  
+  .header__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: var(--clr-primary);
+    min-height: 80vh;
+  }
+</style>

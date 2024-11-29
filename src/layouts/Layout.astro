@@ -2,21 +2,102 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>salva gómez portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="salva gómez's web design and developer portfolio">
+    <meta name="keywords" content="web developer, front developer, back developer, full-stack developer, web design">
+    <meta name="author" content="salva gómez">
+    <meta name="application-name" content="salva gómez porfolio">
+    <meta name="generator" content="VSCode">
+    <!-- theme color for mobile -->
+    <meta name="theme-color" content="#401F71">
+    <!-- google instructions -->
+    <meta name="google" content="notranslate">
+    <meta name="robots" content="index, nofollow">
+    <!-- open graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="salva gómez porfolio">
+    <meta property="og:url" content="#"> <!-- TODO -->
+    <meta property="og:image" content="#"> <!-- TODO -->
+    <meta property="og:description" content="salva gómez's web design and developer portfolio">
+
+    <title>salva gómez</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Roboto:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  :root {
+    --fnt-display: "Abril Fatface", serif;
+    --fnt-primary: "Roboto", sans-serif;
+    
+    --clr-bg: #401F71;
+    --clr-bg-secondary: #824D74;
+    --clr-primary: #FDAF7B;
+    --clr-secondary: #BE7B72;
+    
+    scroll-behavior: smooth;
+  }
+
+  * {
+    box-sizing: border-box;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    &::selection {
+      background-color: var(--clr-bg-secondary);
+    }
+  }
+
+  body {
+    min-height: 100dvh;
+    line-height: 1;
+    background-color: var(--clr-bg);
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: var(--clr-secondary);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--clr-primary);
+    }
+  }
+
+[data-title] {
+    position: relative;
+}
+
+[data-title]::after {
+    content: attr(data-title);
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    font-family: var(--fnt-primary);
+    font-size: .8rem;
+    text-wrap: nowrap;
+    color: var(--clr-primary);
+    background-color: var(--clr-bg);
+    border: 1px solid var(--clr-primary);
+    padding: .4rem;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+[data-title]:hover::after {
+  opacity: 1;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
 </style>
