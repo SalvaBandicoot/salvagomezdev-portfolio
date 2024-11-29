@@ -1,1 +1,123 @@
-experience
+<section id="experience" class="experience">
+  <span class="experience__header section__header">what i did · what i did · what i did · what i did · what i did · </span>
+  <h2 class="section__title">i've been working hard</h2>
+  <div class="experience__container">
+    <div class="experience__item">
+      <p class="experience__business">podium specialists</p>
+      <span class="experience__data">feb 23 - jul 24 · hybrid</span>
+      <div class="section__tech">
+        <span data-title="javascript"><img src="src/icons/javascript.svg" alt="javascript"></span>
+        <span data-title="reactjs"><img src="src/icons/reactjs.svg" alt="reactjs"></span>
+        <span data-title="nodejs"><img src="src/icons/nodejs.svg" alt="nodejs"></span>
+        <span data-title="php"><img src="src/icons/php.svg" alt="php"></span>
+        <span data-title="wordpress"><img src="src/icons/wordpress.svg" alt="wordpress"></span>
+      </div>
+    </div>
+  </div>
+  <div class="experience__container">
+    <div class="experience__item">
+      <p class="experience__business">ashler design</p>
+      <span class="experience__data">apr 22 - dec 22 · remote</span>
+      <div class="section__tech">
+        <span data-title="javascript"><img src="src/icons/javascript.svg" alt="javascript"></span>
+        <span data-title="php"><img src="src/icons/php.svg" alt="php"></span>
+        <span data-title="symfony"><img src="src/icons/symfony.svg" alt="symfony"></span>
+        <span data-title="wordpress"><img src="src/icons/wordpress.svg" alt="wordpress"></span>
+        <span data-title="mysql"><img src="src/icons/mysql.svg" alt="mysql"></span>
+      </div>
+    </div>
+  </div>
+  <div class="experience__container">
+    <div class="experience__item">
+      <p class="experience__business">assembler institute of technology</p>
+      <span class="experience__data">may 21 - mar 22 · remote (internship)</span>
+      <div class="section__tech">
+        <span data-title="javascript"><img src="src/icons/javascript.svg" alt="javascript"></span>
+        <span data-title="reactjs"><img src="src/icons/reactjs.svg" alt="reactjs"></span>
+        <span data-title="nodejs"><img src="src/icons/nodejs.svg" alt="nodejs"></span>
+        <span data-title="php"><img src="src/icons/php.svg" alt="php"></span>
+        <span data-title="redux"><img src="src/icons/redux.svg" alt="redux"></span>
+        <span data-title="mysql"><img src="src/icons/mysql.svg" alt="mysql"></span>
+        <span data-title="firebase"><img src="src/icons/firebase.svg" alt="firebase"></span>
+      </div>
+    </div>
+  </div>
+  <div class="experience__container">
+    <div class="experience__item">
+      <p class="experience__business">pixies graphic solutions</p>
+      <span class="experience__data">jun 18 - jan 21 · presential</span>
+      <div class="section__tech">
+        <span data-title="javascript"><img src="src/icons/javascript.svg" alt="javascript"></span>
+        <span data-title="php"><img src="src/icons/php.svg" alt="php"></span>
+        <span data-title="wordpress"><img src="src/icons/wordpress.svg" alt="wordpress"></span>
+      </div>
+    </div>
+  </div>
+  <div class="experience__container">
+    <div class="experience__item">
+      <p class="experience__business">my first webpage</p>
+      <span class="experience__data">jan 09 · presential</span>
+      <div class="section__tech">
+        <span data-title="dreamweaver"><img src="src/icons/dreamweaver.svg" alt="dramweaver"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .experience, .projects {
+    height: auto;
+  }
+
+  .experience__container {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .experience__business {
+    font-family: var(--fnt-display);
+    font-size: 2.5rem;
+    color: var(--clr-secondary);
+    margin-bottom: -.5rem;
+  }
+
+  @media (width >= 768px) {
+    .experience__business {
+      font-size: 6rem;
+      margin-bottom: -1.8rem;
+    }
+  }
+
+  .experience__data {
+    font-family: var(--fnt-display);
+    font-size: 1.2rem;
+    color: var(--clr-primary);
+    margin-left: 1rem;
+    text-shadow: 1px 1px 2px black;
+  }
+
+  @media (width >= 768px) {
+    .experience__data {
+      font-size: 2rem;
+      margin-left: 1rem;
+    }
+  }
+
+  .section__tech {
+    display: flex;
+    column-gap: 0.6rem;
+    margin-left: 1rem;
+    padding-top: 1rem;
+    & img {
+      width: 1.8rem;
+    }
+  }
+
+  @media (width >= 768px) {
+    .section__tech {
+      & img {
+        width: 2.5rem;
+      }
+    }
+  }
+</style>
