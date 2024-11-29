@@ -1,0 +1,85 @@
+<section id="about" class="about">
+  <span class="about__header section__header">who i am · who i am · who i am · who i am · who i am · </span>
+  <div class="section__container">
+    <div>
+      <h2 class="section__title">hello, i am salva</h2>
+      <p class="about__description">
+        i am a graphic designer and web developer based in spain.
+        i am currently focused on growing my career as a programmer but always using my design skills to bring elegance and good taste to projects.
+      </p>
+      <p class="about__description">
+        i like to build lego, play <a href="#" target="_blank">videogames</a> and create. my favorite food is <a href="#" target="_blank">my mom's lentil soup</a>.
+      </p>
+    </div>
+    <div>
+      <img class="about__profile" src="src/assets/salva-pic.jpg" alt="a cool pic of myself">
+      <span class="about__caption">that's me</span>
+      <img class="about__arrow" alt="it's just a decorative arrow icon" src="src/assets/arrow.svg">
+    </div>
+  </div>
+</section>
+
+<style>
+.about__description {
+  font-family: var(--fnt-primary);
+  line-height: 1.2;
+  margin-top: 1rem;
+  padding-left: 0.2ch;
+  color: var(--clr-secondary);
+  font-size: 1.5rem;
+  width: 30ch;
+  & a {
+    color: var(--clr-primary);
+  }
+}
+
+@media (width >= 768px) {
+  .about__description {
+    line-height: 1.2;
+    font-size: 2.5rem;
+    width: 30ch;
+    & a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.about__profile {
+  display: block;
+  margin-top: 4rem;
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (width >= 768px) {
+  .about__profile {
+    margin-top: 6rem;
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+.about__caption {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  font-family: var(--fnt-primary);
+  font-size: 1.2rem;
+  color: var(--clr-primary);
+}
+
+@media (width >= 768px) {
+  .about__caption {
+    margin-left: 5rem;
+    font-size: 1.5rem;
+  }
+}
+
+.about__arrow {
+  margin-top: -0.8rem;
+  rotate: 145deg;
+  width: 3.8rem;
+  transform: scaleX(-1);
+}
+</style>
