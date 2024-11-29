@@ -15,7 +15,7 @@ import Skills from "./Skills.astro";
 <style is:global>
   .about, .skills, .experience, .projects, .contact {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     padding: 30% 10% 10%;
     z-index: 0
   }
@@ -75,5 +75,23 @@ import Skills from "./Skills.astro";
 
   .skills__header, .projects__header {
     color: var(--clr-bg);
+  }
+
+  .section__tech {
+    display: flex;
+    column-gap: 0.6rem;
+    margin-left: 1rem;
+    padding-top: 1rem;
+    & img {
+      width: 1.8rem;
+    }
+  }
+
+  @media (width >= 768px) {
+    .section__tech {
+      & img {
+        width: 2.5rem;
+      }
+    }
   }
 </style>

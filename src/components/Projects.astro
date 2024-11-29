@@ -1,1 +1,138 @@
-projects
+<section id="projects" class="projects">
+  <span class="projects__header section__header">what i created · what i created · what i created · what i created · what i created · </span>
+  <h2 class="section__title">i created something nice</h2>
+  <div class="projects__container">
+    <!-- <div class="projects__item">
+      <div class="projects__frame">
+        <a href="#" target="_blank" rel="nofollow"><img src="src/assets/footer-background.webp" alt=""></a>
+      </div>
+      <div>
+        <a href="#" target="_blank" rel="nofollow"><p class="projects__name">angel chamorro website</p></a>
+        <span class="projects__description">ux/ui, front</span>
+        <div class="section__tech">
+          <span data-title="javascript"><img src="src/icons/javascript.svg" alt="javascript"></span>
+          <span data-title="reactjs"><img src="src/icons/reactjs.svg" alt="reactjs"></span>
+          <span data-title="nodejs"><img src="src/icons/nodejs.svg" alt="nodejs"></span>
+        </div>
+      </div>
+    </div> -->
+    <div class="projects__item projects__item--right">
+      <div class="projects__frame">
+        <a href="https://ashler.design/" target="_blank" rel="nofollow"><img src="src/assets/ashler.webp" alt=""></a>
+      </div>
+      <div>
+        <a href="https://ashler.design/" target="_blank" rel="nofollow"><p class="projects__name">ashler design website</p></a>
+        <span class="projects__description" data-title="i helped with it while working on ahsler design">front (ashler design)</span>
+        <div class="section__tech">
+          <span data-title="javascript"><img src="src/icons/javascript.svg" alt="javascript"></span>
+          <span data-title="wordpress"><img src="src/icons/wordpress.svg" alt="wordpress"></span>
+        </div>
+      </div>
+    </div>
+    <div class="projects__item">
+      <div class="projects__frame">
+        <a href="https://www.fuertetype.com/" target="_blank" rel="nofollow"><img src="src/assets/fuertetype.webp" alt=""></a>
+      </div>
+      <div>
+        <a href="https://www.fuertetype.com/" target="_blank" rel="nofollow"><p class="projects__name">fuerte type</p></a>
+        <span class="projects__description" data-title="i helped with it while working on ahsler design">back (ashler design)</span>
+        <div class="section__tech">
+          <span data-title="php"><img src="src/icons/php.svg" alt="php"></span>
+          <span data-title="symfony"><img src="src/icons/symfony.svg" alt="symfony"></span>
+        </div>
+      </div>
+    </div>
+    <div class="projects__item projects__item--right">
+      <div class="projects__frame">
+        <a href="https://www.ademcg.org/" target="_blank" rel="nofollow"><img src="src/assets/ademcg.webp" alt=""></a>
+      </div>
+      <div>
+        <a href="https://www.ademcg.org/" target="_blank" rel="nofollow"><p class="projects__name">adem cg website</p></a>
+        <span class="projects__description">ux/ui, front & back</span>
+        <div class="section__tech">
+          <span data-title="php"><img src="src/icons/php.svg" alt="php"></span>
+          <span data-title="wordpress"><img src="src/icons/wordpress.svg" alt="wordpress"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects__container {
+    margin-top: 2rem;
+    height: 100%;
+  }
+
+  .projects__item {
+    height: auto;
+    margin-bottom: 5rem;
+  }
+
+  @media (width >= 768px) {
+    .projects__item {
+      display: flex;
+      column-gap: 1rem;
+      height: 13rem;
+      margin-bottom: 5rem;
+      &:hover a > img{
+        transform: scale(1.2, 1.2);
+      }
+    }
+  }
+
+  @media (width >= 768px) {
+    .projects__item--right div:nth-of-type(2) {
+      margin-left: auto;
+      order: -1;
+    }
+  }
+
+  .projects__frame {
+    width: 100%;
+    overflow: hidden;
+    & img {
+      width: 100%;
+      height: 10rem;
+      object-fit: cover;
+    }
+  }
+
+  @media (width >= 768px) {
+    .projects__frame {
+      width: 30%;
+      & img {
+        height: 100%;
+        transition: transform .8s ease-in-out;
+      }
+    }
+  }
+
+  .projects__name {
+    font-family: var(--fnt-display);
+    font-size: 2.5rem;
+    color: var(--clr-secondary);
+    margin-bottom: -.5rem;
+  }
+
+  @media (width >= 768px) {
+    .projects__name {
+      font-size: 5.5rem;
+      margin-bottom: -1.8rem;
+    }
+  }
+
+  .projects__description {
+    font-family: var(--fnt-display);
+    font-size: 1.2rem;
+    color: var(--clr-primary);
+    text-shadow: 1px 1px 2px black;
+    margin-left: 1rem;
+  }
+
+  @media (width >= 768px) {
+    .projects__description {
+      font-size: 2rem;
+    }
+  }
+</style>
