@@ -12,9 +12,13 @@ import Skills from "./Skills.astro";
     <Projects />
 </main>
 
+<script>
+</script>
+
 <style is:global>
   .about, .skills, .experience, .projects, .contact {
     position: relative;
+    overflow: hidden;
     min-height: 100vh;
     padding: 30% 10% 10%;
     z-index: 0
@@ -35,15 +39,41 @@ import Skills from "./Skills.astro";
   .section__header {
     position: absolute;
     top: 6rem;
-    left: 0;
-    width: 100%;
+    width: 100&;
     font-family: var(--fnt-display);
     font-size: 5rem;
     text-wrap: nowrap;
+    white-space: nowrap;
     overflow: hidden;
     opacity: 0.6;
     z-index: -1;
   }
+
+  .section__header--primary {
+    animation: marquee-primary 20s linear infinite;
+  }
+
+  .section__header--secondary {
+    transform: translateX(-100%);
+    animation: marquee-secondary 20s linear infinite;
+  }
+
+@keyframes marquee-primary {
+  from {
+    transform: translateX(-10%);
+  }
+  to {
+    transform: translateX(90%);
+  }
+}
+@keyframes marquee-secondary {
+  from {
+    transform: translateX(-110%);
+  }
+  to {
+    transform: translateX(-10%);
+  }
+}
 
   @media (width >= 768px) {
     .section__header {
