@@ -9,8 +9,11 @@
         i am currently focused on growing my career as a programmer but always using my design skills to bring elegance and good taste to projects.
       </p>
       <p class="about__description">
-        i like to build lego, play <a href="#" target="_blank">videogames</a> and create. my favorite food is <a href="#" target="_blank">my mom's lentil soup</a>.
+        i like to build lego, play <span class="about__description--marked" id="videogames">videogames</span> and create. my favorite food is <span class="about__description--marked" >my mom's lentil soup</span>.
       </p>
+      <picture class="crash-bandicoot__container">
+        <img id="crash-bandicoot" src="src/assets/crashbandicoot.gif">
+      </picture>
     </div>
     <div>
       <img class="about__profile" src="src/assets/salva-pic.jpg" alt="a cool pic of myself">
@@ -20,67 +23,116 @@
   </div>
 </section>
 
-<style>
-.about__description {
-  font-family: var(--fnt-primary);
-  line-height: 1.2;
-  margin-top: 1rem;
-  padding-left: 0.2ch;
-  color: var(--clr-secondary);
-  font-size: 1.5rem;
-  width: 30ch;
-  & a {
-    color: var(--clr-primary);
-  }
-}
+<script>
+  const videogamesButton = document.getElementById("videogames");
+  const crashBandicoot = document.getElementById("crash-bandicoot");
 
-@media (width >= 768px) {
+  const playCrashBandicoot = () => {
+
+    if (crashBandicoot) {
+      if (!crashBandicoot.className) {
+        crashBandicoot.className = "crash-bandicoot";
+        setTimeout(() => {
+          crashBandicoot.className = "";
+        }, 10000);
+      } 
+    }
+  };
+
+  videogamesButton?.addEventListener("click", playCrashBandicoot);
+</script>
+
+<style>
   .about__description {
+    font-family: var(--fnt-primary);
     line-height: 1.2;
-    font-size: 2.5rem;
+    margin-top: 1rem;
+    padding-left: 0.2ch;
+    color: var(--clr-secondary);
+    font-size: 1.5rem;
     width: 30ch;
-    & a:hover {
-      text-decoration: underline;
+  }
+
+  @media (width >= 768px) {
+    .about__description {
+      line-height: 1.2;
+      font-size: 2.5rem;
+      width: 30ch;
     }
   }
-}
 
-.about__profile {
-  display: block;
-  margin-top: 4rem;
-  width: 15rem;
-  height: 15rem;
-  object-fit: cover;
-  border-radius: 50%;
-}
+  .about__description--marked
+  {
+    color: var(--clr-primary);
+    cursor: pointer;
+  }
 
-@media (width >= 768px) {
+  .crash-bandicoot__container {
+    display: none;
+  }
+
+  @media (width >= 1080px) {
+    .crash-bandicoot__container {
+      display: flex;
+      justify-content: end;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      width: 110vw;
+      transform: translateX(-5%);
+    }
+  }
+
+  .crash-bandicoot {
+    animation: woah 10s linear infinite;
+  }
+
+  @keyframes woah {
+    from {
+      margin-right: 0;
+    }
+    to {
+      margin-right: 100%;
+    }
+  }
+
   .about__profile {
-    margin-top: 6rem;
-    width: 20rem;
-    height: 20rem;
+    display: block;
+    margin-top: 4rem;
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
   }
-}
 
-.about__caption {
-  margin-top: 1rem;
-  margin-left: 2rem;
-  font-family: var(--fnt-primary);
-  font-size: 1.2rem;
-  color: var(--clr-primary);
-}
+  @media (width >= 768px) {
+    .about__profile {
+      margin-top: 6rem;
+      width: 20rem;
+      height: 20rem;
+    }
+  }
 
-@media (width >= 768px) {
   .about__caption {
-    margin-left: 5rem;
-    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-family: var(--fnt-primary);
+    font-size: 1.2rem;
+    color: var(--clr-primary);
   }
-}
 
-.about__arrow {
-  margin-top: -0.8rem;
-  rotate: 145deg;
-  width: 3.8rem;
-  transform: scaleX(-1);
-}
+  @media (width >= 768px) {
+    .about__caption {
+      margin-left: 5rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  .about__arrow {
+    margin-top: -0.8rem;
+    rotate: 145deg;
+    width: 3.8rem;
+    transform: scaleX(-1);
+  }
 </style>
