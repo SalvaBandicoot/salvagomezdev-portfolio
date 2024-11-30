@@ -21,7 +21,7 @@
     <meta property="og:description" content="salva gómez's web design and developer portfolio">
 
     <title>salva gómez</title>
-    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
@@ -71,33 +71,33 @@
     }
   }
 
-[data-title] {
-    position: relative;
-}
+  [data-title] {
+      position: relative;
+  }
 
-[data-title]::after {
-    content: attr(data-title);
-    position: absolute;
-    top: -2rem;
-    left: 0;
-    font-family: var(--fnt-primary);
-    font-size: .8rem;
-    text-wrap: nowrap;
-    color: var(--clr-primary);
-    background-color: var(--clr-bg);
-    border: 1px solid var(--clr-primary);
-    padding: .4rem;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-}
+  [data-title]::after {
+      content: attr(data-title);
+      position: absolute;
+      top: -2rem;
+      left: 0;
+      font-family: var(--fnt-primary);
+      font-size: .8rem;
+      text-wrap: nowrap;
+      color: var(--clr-primary);
+      background-color: var(--clr-bg);
+      border: 1px solid var(--clr-primary);
+      padding: .4rem;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+  }
 
-[data-title]:hover::after {
-  opacity: 1;
-}
+  [data-title]:hover::after {
+    opacity: 1;
+  }
 
-a {
-  color: currentColor;
-  text-decoration: none;
-}
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
 </style>

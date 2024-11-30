@@ -1,0 +1,177 @@
+<footer id="contact" class="contact">
+  <div class="contact__container">
+    <span class="contact__title">let's talk</span>
+    <div class="contact__info">
+      <div class="contact__mail">
+        <span id="contact__mail">salvawebdg@gmail.com</span>
+        <span id="contact__copy" data-title="copy to clipboard"><img src="src/icons/copy.svg" alt="copy"></span>
+        <span data-title="send a mail"><a href="mailto:salvawebdg@gmail.com"><img src="src/icons/mail.svg" alt="send a mail"></a></span>
+      </div>
+      <div>
+        <nav class="contact__menu">
+          <ul class="contact__links">
+            <li><a href="https://www.linkedin.com/in/salvabandicoot/" target="_blank" rel="nofollow">linkedin</a></li>
+            <li><a href="https://github.com/SalvaBandicoot" target="_blank" rel="nofollow">github</a></li>
+            <li><a href="src/assets/s4lv4g0m3z.pdf" target="_blank">curriculum</a></li>
+          </ul>
+          <span>Personal use only. Not for commercial use.</span>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- pic by @kensuarez 📷 -->
+</footer>
+
+<script>
+  const copyMail = () => {
+    const mailSpan = document.getElementById("contact__mail");
+    const copyButton = document.getElementById("contact__copy");
+    const email = mailSpan?.textContent;
+
+    if (email) {
+      navigator.clipboard.writeText(email)
+      .then(() => copyButton?.setAttribute("data-title", "copied!"))
+      .catch((err) => console.error("error copying: ", err));
+    } else {
+      console.error("mail not found");
+    }
+  };
+  
+  document.getElementById("contact__copy")?.addEventListener("click", copyMail);
+</script>
+
+<style>
+  .contact {
+    overflow: hidden;
+    padding: 6rem 3rem 0;
+    background:
+    linear-gradient(to top, #000 5%, transparent 80%),
+    url(src/assets/footer-background.webp);
+    background-size: cover;
+    background-position: top;
+  }
+
+  .contact__container {
+    height: 100%;
+  }
+
+  @media (width >= 768px) {
+    .contact__container {
+      display: flex;
+      justify-content: end;
+    }
+  }
+
+  .contact__title {
+    position: absolute;
+    left: 0;
+    font-family: var(--fnt-display);
+    font-size: 10rem;
+    line-height: 0.8;
+    width: 3ch;
+    color: var(--clr-bg-secondary);
+  }
+
+  @media (width >= 1080px) {
+    .contact__title {
+      bottom: -1rem;
+    }
+  }
+
+@media (width >= 1440px) {
+  .contact__title {
+    font-size: 14rem;
+  }
+}
+
+  .contact__info {
+    position: absolute;
+    bottom: -1rem;
+    width: 90%;
+  }
+
+  @media (width >= 1080px) {
+    .contact__info {
+      margin-top: auto;
+      width: 65%;
+    }
+  }
+
+  .contact__mail {
+    display: flex;
+    padding-bottom: 1rem;
+    font-family: var(--fnt-primary);
+    color: var(--clr-primary);
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--clr-secondary);
+    & span {
+      display: inline-block;
+      border: 1px solid var(--clr-secondary);
+      padding: .6rem 1.4rem;
+      & img {
+        width: 1.4rem;
+      }
+    }
+    & span:not(:first-of-type) {
+      background-color: var(--clr-bg-secondary);
+    }
+  }
+
+  @media (width >= 768px) {
+    .contact__mail {
+      font-size: 1.4rem;
+      & span:not(:first-of-type) {
+        transition: background-color .3s ease-in-out;
+        &:hover {
+          cursor: pointer;
+          background-color: var(--clr-secondary);
+        }
+      }
+    }
+  }
+
+  .contact__menu {
+    padding: 1rem 0 2rem;
+    font-family: var(--fnt-primary);
+    font-size: 1.2rem;
+    color: var(--clr-primary);
+    & span {
+      display: block;
+      margin-top: 2rem;
+      margin-left: .2rem;
+    }
+  }
+
+  @media (width >= 768px) {
+    .contact__menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 1rem 0 2rem;
+      font-size: 1.4rem;
+      & span {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .contact__links {
+    display: flex;
+    column-gap: 1rem;
+    margin-left: .2rem;
+    list-style-type: none;
+  }
+
+  .contact__links a {
+    font-family: var(--fnt-primary);
+  }
+
+  @media (width >= 768px) {
+    .contact__links a {
+    transition: color .3s ease-in-out;
+      &:hover {
+        color: var(--clr-secondary);
+      }
+    }
+  }
+</style>
