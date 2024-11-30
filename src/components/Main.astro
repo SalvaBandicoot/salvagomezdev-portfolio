@@ -38,7 +38,7 @@ import Skills from "./Skills.astro";
 
   .section__header {
     position: absolute;
-    top: 6rem;
+    top: 4rem;
     width: 100&;
     font-family: var(--fnt-display);
     font-size: 5rem;
@@ -48,6 +48,12 @@ import Skills from "./Skills.astro";
     opacity: 0.6;
     z-index: -1;
   }
+
+@media (width >= 768px) {
+  .section__header {
+    top: 6rem;
+  }
+}
 
   .section__header--primary {
     animation: marquee-primary 20s linear infinite;
