@@ -5,7 +5,7 @@
       <div class="contact__mail">
         <span id="contact__mail">salvawebdg@gmail.com</span>
         <span id="contact__copy" data-title="copy to clipboard"><img src="src/icons/copy.svg" alt="copy"></span>
-        <span data-title="send a mail"><a href="mailto:salvawebdg@gmail.com"><img src="src/icons/mail.svg" alt="send a mail"></a></span>
+        <a href="mailto:salvawebdg@gmail.com"><span data-title="send a mail"><img src="src/icons/mail.svg" alt="send a mail"></span></a>
       </div>
       <div>
         <nav class="contact__menu">
@@ -30,10 +30,10 @@
 
     if (email) {
       navigator.clipboard.writeText(email)
-      .then(() => copyButton?.setAttribute("data-title", "copied!"))
-      .catch((err) => console.error("error copying: ", err));
-    } else {
-      console.error("mail not found");
+      copyButton?.setAttribute("data-title", "copied!")
+      setTimeout(() => {
+        copyButton?.setAttribute("data-title", "copy to clipboard")
+      }, 2000);
     }
   };
   
@@ -105,7 +105,7 @@
     color: var(--clr-primary);
     font-size: 1.2rem;
     border-bottom: 1px solid var(--clr-secondary);
-    & span {
+    & span, a > span {
       display: inline-block;
       border: 1px solid var(--clr-secondary);
       padding: .6rem 1.4rem;
@@ -113,7 +113,7 @@
         width: 1.4rem;
       }
     }
-    & span:not(:first-of-type) {
+    & span:not(:first-of-type), a {
       background-color: var(--clr-bg-secondary);
     }
   }
@@ -121,7 +121,7 @@
   @media (width >= 768px) {
     .contact__mail {
       font-size: 1.4rem;
-      & span:not(:first-of-type) {
+      & span:not(:first-of-type), a {
         transition: background-color .3s ease-in-out;
         &:hover {
           cursor: pointer;
