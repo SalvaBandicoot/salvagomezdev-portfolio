@@ -9,14 +9,18 @@
         i am currently focused on growing my career as a programmer but always using my design skills to bring elegance and good taste to projects.
       </p>
       <p class="about__description">
-        i like to build lego, play <span class="about__description--marked" id="videogames">videogames</span> and create. my favorite food is <span class="" >my mom's lentil soup</span>.
+        i like to build <span class="about__description--marked" id="lego">lego</span>, play <span class="about__description--marked" id="videogames">videogames</span> and create. my favorite food is <span class="" >my mom's lentil soup</span>.
       </p>
       <picture class="crash-bandicoot__container">
         <img id="crash-bandicoot" src="src/assets/crashbandicoot.gif">
       </picture>
     </div>
     <div>
-      <img class="about__profile" src="src/assets/salva-pic.jpg" alt="a cool pic of myself">
+      <div class="about__profile--container">
+        <div id="profileImageContainer" class="about__profile--image">
+          <img id="profileImage" class="about__profile" src="src/assets/salva-pic.jpg" alt="a cool pic of myself">
+        </div>
+      </div>
       <span class="about__caption">that's me</span>
       <img class="about__arrow" alt="it's just a decorative arrow icon" src="src/assets/arrow.svg">
     </div>
@@ -25,7 +29,10 @@
 
 <script>
   const videogamesButton = document.getElementById("videogames");
+  const legoButton = document.getElementById("lego")
   const crashBandicoot = document.getElementById("crash-bandicoot");
+  const profileImageContainer = document.getElementById("profileImageContainer")
+  const profileImage = document.getElementById("profileImage")
 
   const playCrashBandicoot = () => {
 
@@ -39,7 +46,26 @@
     }
   };
 
+  const changeToLegoProfile = () => {
+    if (profileImage?.getAttribute("src") == "src/assets/salva-pic.jpg") {
+      setTimeout(() => {
+        profileImage.setAttribute("src", "src/assets/salva-pic-lego.png");
+      }, 150);
+      if (profileImageContainer) {
+        profileImageContainer.className = "about__profile--image flip";
+      }
+    } else {
+      setTimeout(() => {
+        profileImage?.setAttribute("src", "src/assets/salva-pic.jpg");
+      }, 150);
+      if (profileImageContainer) {
+        profileImageContainer.className = "about__profile--image";
+      }
+    }
+  }
+
   videogamesButton?.addEventListener("click", playCrashBandicoot);
+  legoButton?.addEventListener("click", changeToLegoProfile)
 </script>
 
 <style>
@@ -95,6 +121,19 @@
     to {
       margin-right: 100%;
     }
+  }
+
+  .about__profile--container {
+    perspective: 1000px;
+  }
+
+  .about__profile--image {
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d; 
+  }
+
+  .flip {
+    transform: rotateY(180deg);
   }
 
   .about__profile {
